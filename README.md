@@ -3,6 +3,8 @@
 Привет! Данное приложение сделано с использованием React + VKUI библиотеки.<br />
 Особенно сильно в разработке помогла официальная группа [мини-аппов](https://vk.com/vkappsdev).
 
+Ссылка на GithubPages: [https://danilstoyanov.github.io/charityweb/](https://danilstoyanov.github.io/charityweb/)
+
 # Поддерживаемые платформы
 * VK MINI APP (Desktop + Mobile IOS + Mobile Android)
 * m.vk.com
