@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/charityweb/static/css/main.fdf0614a.chunk.css",
+    "main.js": "/charityweb/static/js/main.c294921d.chunk.js",
+    "main.js.map": "/charityweb/static/js/main.c294921d.chunk.js.map",
+    "runtime-main.js": "/charityweb/static/js/runtime-main.7eebc1be.js",
+    "runtime-main.js.map": "/charityweb/static/js/runtime-main.7eebc1be.js.map",
+    "static/css/2.09e62520.chunk.css": "/charityweb/static/css/2.09e62520.chunk.css",
+    "static/js/2.17281613.chunk.js": "/charityweb/static/js/2.17281613.chunk.js",
+    "static/js/2.17281613.chunk.js.map": "/charityweb/static/js/2.17281613.chunk.js.map",
+    "index.html": "/charityweb/index.html",
+    "precache-manifest.840a720b1275961ee6d329f009392d05.js": "/charityweb/precache-manifest.840a720b1275961ee6d329f009392d05.js",
+    "service-worker.js": "/charityweb/service-worker.js",
+    "static/css/2.09e62520.chunk.css.map": "/charityweb/static/css/2.09e62520.chunk.css.map",
+    "static/css/main.fdf0614a.chunk.css.map": "/charityweb/static/css/main.fdf0614a.chunk.css.map",
+    "static/js/2.17281613.chunk.js.LICENSE.txt": "/charityweb/static/js/2.17281613.chunk.js.LICENSE.txt",
+    "static/media/comment.png": "/charityweb/static/media/comment.0a18033a.png",
+    "static/media/kitten.png": "/charityweb/static/media/kitten.606fc12c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7eebc1be.js",
+    "static/css/2.09e62520.chunk.css",
+    "static/js/2.17281613.chunk.js",
+    "static/css/main.fdf0614a.chunk.css",
+    "static/js/main.c294921d.chunk.js"
+  ]
+}
