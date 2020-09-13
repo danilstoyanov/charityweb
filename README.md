@@ -1,36 +1,20 @@
-#https://user52028187-wf7zxlyx.wormhole.vk-apps.com/
+# ❗ Информация для проверяющих
 
-[<img width="134" src="https://vk.com/images/apps/mini_apps/vk_mini_apps_logo.svg">](https://vk.com/services)
+Привет! Данное приложение сделано с использованием React + VKUI библиотеки.<br />
+Особенно сильно в разработке помогла официальная группа [мини-аппов](https://vk.com/vkappsdev).
 
-# Create VK Mini App [![npm][npm]][npm-url] [![deps][deps]][deps-url]
+# Поддерживаемые платформы
+* VK MINI APP (Desktop + Mobile IOS + Mobile Android)
+* m.vk.com
+* десктоп
 
-## How to install
+# Реализованные фичи
+* Сверстаны все экраны что были в дизайне.<br />
+* Работает добавление картинки для акции.<br />
+* Можно самостоятельно выбрать название акции.<br />
+* На страничке с постом зафиксирована плашка для сбора средств, при клике помочь увеличивается кол-во собранных средств.<br />
 
-### Create VK Mini App with gh-pages deploy
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name>`
-
-### Create VK Mini App with Zeit deploy
-
-Firstly, you have to create Zeit account and connect it with your GitHub profile — https://zeit.co/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --zeit`
-
-### Create VK Mini App with Surge deploy
-
-Firstly, you have to create Surge account and Surge-domain — https://surge.sh/
-
-`npx @vkontakte/create-vk-mini-app <app-directory-name> --surge <surge-domain>`
-
-## How to start work with app
-
-Go to created folder and run:
-`yarn start` || `npm start` — this will start dev server with hot reload on `localhost:10888`.
-
-`yarn run build` || `npm run build` — this will build production bundle, with tree-shaking, uglify and all this modern fancy stuff
-
-[npm]: https://img.shields.io/npm/v/@vkontakte/create-vk-mini-app.svg
-[npm-url]: https://npmjs.com/package/@vkontakte/create-vk-mini-app
-
-[deps]: https://img.shields.io/david/vkcom/create-vk-mini-app.svg
-[deps-url]: https://david-dm.org/vkcom/create-vk-mini-app
+# Несколько скриншотов
+<img src="digg.jpg" width="200">
+<img src="digg-2.jpg" width="200">
+<img src="digg-3.jpg" width="200">
