@@ -1,51 +1,69 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import bridge from '@vkontakte/vk-bridge';
 import View from '@vkontakte/vkui/dist/components/View/View';
-import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Home';
-import Persik from './panels/Persik';
+import Start from './panels/Start';
+import Create from './panels/Create';
+import Form from './panels/Form';
+import Snippet from './panels/Snippet';
+import Post from './panels/Post';
+
+import './main.css';
 
 const App = () => {
-	const [activePanel, setActivePanel] = useState('home');
-	const [fetchedUser, setUser] = useState(null);
-	const [popout, setPopout] = useState(<ScreenSpinner size='large' />);
+  const [activePanel, setActivePanel] = useState('start');
+  const [charityType, setCharityType] = useState('');
+  const [eventState, setEventState] = useState({});
 
-	useEffect(() => {
-		bridge.subscribe(({ detail: { type, data }}) => {
-			if (type === 'VKWebAppUpdateConfig') {
-				const schemeAttribute = document.createAttribute('scheme');
-				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
-				document.body.attributes.setNamedItem(schemeAttribute);
-			}
-		});
+  const goToPanel = panelName => {
+    setActivePanel(panelName);
+  };
 
-		async function fetchData() {
-			try {
-				const user = await bridge.send('VKWebAppGetUserInfo');
-	
-				setUser(user);
-				setPopout(null);
-			} catch (err) {
-				console.log(err);
-			}
-		}
-		fetchData();
+  const setEventStateFunc = (payload = {}) => {
+    setEventState({ ...eventState, ...payload });
+  }
 
-		console.log('use effect worked')
-	}, []);
+  return (
+    <View activePanel={activePanel}>
+      <Start
+        id="start"
+        goToPanel={goToPanel}
+      />
 
-	const go = e => {
-		setActivePanel(e.currentTarget.dataset.to);
-	};
+      <Create
+        id="create"
+        goToPanel={goToPanel}
+        setCharityType={setCharityType}
+      />
 
-	return (
-		<View activePanel={activePanel} popout={popout}>
-			<Home id='home' fetchedUser={fetchedUser} go={go} />
-			<Persik id='persik' go={go} />
-		</View>
-	);
+      <Form
+        id="form"
+        goToPanel={goToPanel}
+        charityType={charityType}
+        setCharityType={setCharityType}
+        setEventState={setEventStateFunc}
+      />
+
+      <Snippet
+        id="snippet"
+        goToPanel={goToPanel}
+        charityType={charityType}
+        eventState={eventState}
+        setCharityType={setCharityType}
+        setEventState={setEventStateFunc}
+      />
+
+      <Post
+        id="post"
+        goToPanel={goToPanel}
+        charityType={charityType}
+        eventState={eventState}
+        setCharityType={setCharityType}
+        setEventState={setEventStateFunc}
+      />
+    </View>
+  );
 }
 
 export default App;
